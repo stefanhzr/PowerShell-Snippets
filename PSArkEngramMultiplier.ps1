@@ -22,9 +22,13 @@
     SOFTWARE.
 #>
 
-# Engram points multiplier (saves as GameUserSettings.ini within the current directory)
+# Engram points multiplier
 $engram = 1
 
+# Destination path (default saves as GameUserSettings.ini within the current directory)
+$path = $(Get-Location).Path + '\GameUserSettings.ini'
+
+# .ini contents
 @"
 [/script/shootergame.shootergamemode]
 OverridePlayerLevelEngramPoints=$(8 * $engram)
@@ -141,4 +145,4 @@ OverridePlayerLevelEngramPoints=$(70 * $engram)
 OverridePlayerLevelEngramPoints=$(70 * $engram)
 OverridePlayerLevelEngramPoints=$(70 * $engram)
 OverridePlayerLevelEngramPoints=$(70 * $engram)
-"@ | Out-File -FilePath $(Get-Location).Path + '\GameUserSettings.ini' -Force | Out-Null
+"@ | Out-File -FilePath $path -Force | Out-Null
