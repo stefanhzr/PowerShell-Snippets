@@ -25,8 +25,8 @@
 # Engram points multiplier
 $engram = 1
 
-# Destination path (default saves as GameUserSettings.ini within the current directory)
-$path = $(Get-Location).Path + '\GameUserSettings.ini'
+# Destination path (default saves as Game.ini within the current directory)
+$path = $(Get-Location).Path + '\Game.ini'
 
 # .ini contents
 @"
