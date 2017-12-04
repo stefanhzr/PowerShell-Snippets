@@ -31,6 +31,7 @@ $path = $(Get-Location).Path + '\GameUserSettings.ini'
 # .ini contents
 @"
 [/script/shootergame.shootergamemode]
+OverridePlayerLevelEngramPoints=0
 OverridePlayerLevelEngramPoints=$(8 * $engram)
 OverridePlayerLevelEngramPoints=$(8 * $engram)
 OverridePlayerLevelEngramPoints=$(8 * $engram)
